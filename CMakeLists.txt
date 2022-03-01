@@ -10,7 +10,7 @@ target_compile_features(project_options INTERFACE cxx_std_17)
 add_subdirectory(src)
 
 option(ENABLE_TEST    "Set to ON to enable tests"   OFF)
-option(ENABLE_SAMPLES "Set to ON to enable samples" OFF)
+option(ENABLE_SAMPLES "Set to ON to enable samples" ON)
 
 if (ENABLE_TEST)
     add_subdirectory(tests)
