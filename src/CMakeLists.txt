@@ -1,0 +1,1 @@
+add_library(TestLibrary STATIC library.h library.cpp)
