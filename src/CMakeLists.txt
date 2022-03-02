@@ -2,7 +2,12 @@ project(TestLibrary)
 
 set(LIBRARY_INCLUDE_FILES "${CMAKE_SOURCE_DIR}/include/library.h")
 
-add_library(${PROJECT_NAME} STATIC ${LIBRARY_INCLUDE_FILES} library.cpp)
+file(GLOB TESTLIBRARY_SRC_FILES
+     "${CMAKE_SOURCE_DIR}/include/*.h"
+     "*.cpp"
+)
+
+add_library(${PROJECT_NAME} STATIC ${TESTLIBRARY_SRC_FILES})
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC 
